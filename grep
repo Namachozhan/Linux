@@ -1,0 +1,25 @@
+Grep:   https://hclo365-my.sharepoint.com/personal/praveenkumar_banga_hcl_com1/_layouts/15/stream.aspx?id=%2Fpersonal%2Fpraveenkumar%5Fbanga%5Fhcl%5Fcom1%2FDocuments%2FRecordings%2FLinux%20Administration%2C%20Shell%20scripting%2C%20Ansible%20Training%2D20230502%5F160107%2DMeeting%20Recording%2Emp4&ga=1
+******** grep -l nazhan                                       ---> it will grep present directory only 
+grep -r nazhan                                       ---> it will grep all the files
+grep -rn nazhan                                       ---> it will grep all the files with line number
+grep -i nazhan test.txt                              ---> ignore case sensitive will show all the name
+grep -in nazhan test.txt                             ---> ignore and set the line nummber
+grep -ic nazhan test.txt                             ---> ignore and will show the word count
+grep -iw nazhan test.txt                             ---> It will shows the wherever nazhan name seperately occures.
+grep -iv nazhan test.txt                             ---> it will shows the whichever line in not contain nazhan (opposite).
+egrep -i "nazhan|chozhan|hcl" test.txt               ---> it will display wherever nazhan,chozhan,hcl presenting.(extra grep).
+egrep -i "nazhan|chozhan|hcl" test.txt               ---> it will display wherever nazhan,chozhan,hcl not presenting.(extra grep).opposite.
+grep -A2 nazhan test.txt                             ---> it will grep the nazhan line and also after nazhan two lines also will show(A = after,2 = line,we can line 2,3,5,4)
+grep -B2 nazhan test.txt                             ---> it will grep the nazhan line and also before nazhan two lines also will show(B = before,2 = line,we can line 2,3,5,4)
+grep -wB2 nazhan test.txt                            ---> it will grep the all the line of nazhan so it will show more before for that w is grep exact match line(w=word,B = before,2 = line,we can line 2,3,5,4)
+grep -C2 nazhan test.txt                             ---> it will show before and after nazhan line 
+grep 'nazhan[0-9]' test.txt                          ---> it will show wherever number present next to nazhan (like nazhan1.or nazhan4)
+grep 'nazhan[0-9][0-9]' test.txt                     ---> it will show wherever two degit number present next to nazhan (like nazhan15.or nazhan42)
+grep 'nazhan[0-9]\{4\}' test.txt                     ---> it will show wherever minimum4 degit number present next to nazhan (like nazhan1545.or nazhan4422)
+grep nazhan[a-b]                                     ---> it will show wherever alphapet present next to nazhan (like nazhanf.or nazhana)
+grep '^nazhan[0-9]' test.txt                         ---> it will show whichever beginging of line contains nazhan and number (^begining).
+grep '^nazhan[0-9]' test.txt                         ---> it will show whichever beginging of line contains nazhan and number (^begining).
+grep '^nazhan[0-9]\{4\}$' test.txt                   ---> it will show whichever beginging of line contains only 4 digit num next to nazhan ($ end)
+grep '^nazhan$ test.txt                              ---> it will show wichever line contain only nazhan.
+grep 'nazhan.' test.txt                              ---> it will show all the nazhan (. means it can be any character like alphapat,number,specialcharrecter)
+grep 'nazhan\.' test.txt                             ---> if need to grep nazhan. for that need to use \. 
