@@ -1,1 +1,0 @@
-s is checking for git push and config
